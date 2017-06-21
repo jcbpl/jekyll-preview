@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Jacob Paul"]
   spec.email         = ["jacob@jacobpaul.io"]
 
-  spec.summary       = %q{Render and serve Jekyll pages on-demand.}
+  spec.summary       = %q{On-demand rendering of Jekyll pages}
   spec.homepage      = "https://github.com/jcbpl/jekyll-preview"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
