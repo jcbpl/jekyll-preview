@@ -38,6 +38,14 @@ module Jekyll
       class << self
         def init_with_program(prog)
           prog.command(:preview) do |cmd|
+            cmd.description "Serve your site locally with dynamic rendering"
+            cmd.syntax "preview [options]"
+
+            add_build_options(cmd)
+            Jekyll::Commands::Serve.singleton_class::COMMAND_OPTIONS.each do |key, val|
+              cmd.option key, *val
+            end
+
             cmd.action do |argv, opts|
               extend_serve_command
               extend_regenerator
